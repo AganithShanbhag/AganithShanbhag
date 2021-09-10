@@ -1,5 +1,5 @@
 - 👋 Hi, I’m AganithShanbhag
-- 👀 I’m a Sophomore at MIT Manipal, learning Electronics and Communication Engineering
+- 👀 I’m a 3rd Year at MIT Manipal, learning Electronics and Communication Engineering
 - 🌱 I’m currently learning React  and Firebase
 - 💞️ I’m looking to collaborate on any web dev projects
 - 📫 Reach me -> aganithshanbhag@gmail.com 
