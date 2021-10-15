@@ -5,7 +5,21 @@
 - 💞️ I’m looking to collaborate on any web dev projects
 - 📫 Reach me -> aganithshanbhag@gmail.com 
 
-**Languages/Frameworks**
+<br/>
+<br/>
+
+> **An Electronics Engineering student with an interest in
+Software Engineering. I love Web Development and
+currently learning App Dev. Recent projects include
+React and React-native with Firebase BaaS. I am
+experienced with C++, Python, Matlab, Pspice, Ngspice,
+Proteus and have spent a considerable amount of time
+on Arduino Projects**<br/><a id="raw-url" href="AganithShanbhag_EC.pdf">Download My Resume</a>
+
+<hr/>
+
+
+### Languages/Frameworks
 
 ![](https://img.shields.io/badge/C-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=639af2) 
 ![](https://img.shields.io/badge/C++-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=0846a8) 
@@ -14,19 +28,31 @@
 ![](https://img.shields.io/badge/ReactJs-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=39a6e6)
 
 
-**Stats**
+### Projects
+
+| Scientia Weekly | Prep-It Academy | Cowin-Slot-Finder |
+|:-----|:------:|------:|
+| [<img align="left" alt="Scientia Weekly" width="100px" margin="5px"  src="scientiaweekly1.png"/>][SWeekly] |[<img align="left" alt="Scientia Weekly" width="180px" margin="5px"  src="Screenshot (667).png"/>][Prep-It]  |[<img align="left" alt="Scientia Weekly" width="180px" margin="5px"  src="Cowin-slot-finder.png"/>][Cowin]|
+| HTML, CSS, JS + Frameworks + PHP|  ReactJs | ReactJs + Cowin Api |
+
+<br/>
+
+## Stats
 
 ![Aganith's Github Stats](https://github-readme-stats.vercel.app/api?username=aganithshanbhag&theme=dark&show_icons=true)
 
 
-**Connect with me:**
+
+### Connect with me:
 
 [<img align="left" alt="aganith linkedin" width="30px" margin="10px" src="./linkedin.svg"/>][linkedin] 
 [<img align="left" alt="aganith twitter" width="30px" margin="10px"  src="./twitter.svg"/>][twitter] 
 [<img align="left" alt="aganith medium" width="30px" margin="10px"  src="./medium.svg"/>][medium] 
 [<img align="left" alt="aganith quora" width="30px" margin="10px"  src="./quora.svg"/>][quora] 
 [<img align="left" alt="aganith instagram" width="30px" margin="10px"  src="./instagram.svg"/>][insta]
-[<img align="left" alt="Scientia Weekly" width="30px" margin="10px"  src="https://www.scientiaweekly.com/images/logos/scientiaweekly1.png"/>][SWeekly]
+
+<br/>
+<br/>
 
 
 
@@ -35,6 +61,10 @@
 [quora]: https://www.quora.com/profile/Aganith-Shanbhag
 [twitter]: https://twitter.com/Aganith_
 [medium]: https://medium.com/@aganithshanbhag
+[SWeekly]:https://www.scientiaweekly.com/?i=1
+
+[Cowin]:https://cowin-slot-finder.netlify.app/
+[Prep-It]:https://609f66b8dd9541770d573b75--prep-it-academy.netlify.app/
 
 
 
