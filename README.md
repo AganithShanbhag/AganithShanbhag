@@ -19,11 +19,22 @@
 ![Aganith's Github Stats](https://github-readme-stats.vercel.app/api?username=aganithshanbhag&theme=dark&show_icons=true)
 
 
-**You can find me**
-[<img align="left" alt="aganith linkedin"  src="./linkedin.svg"/>][linkedin]
+**Connect with me:**
+
+[<img align="left" alt="aganith linkedin" width="30px" margin="10px" src="./linkedin.svg"/>][linkedin] 
+[<img align="left" alt="aganith twitter" width="30px" margin="10px"  src="./twitter.svg"/>][twitter] 
+[<img align="left" alt="aganith medium" width="30px" margin="10px"  src="./medium.svg"/>][medium] 
+[<img align="left" alt="aganith quora" width="30px" margin="10px"  src="./quora.svg"/>][quora] 
+[<img align="left" alt="aganith instagram" width="30px" margin="10px"  src="./instagram.svg"/>][insta]
+[<img align="left" alt="Scientia Weekly" width="30px" margin="10px"  src="https://www.scientiaweekly.com/images/logos/scientiaweekly1.png"/>][SWeekly]
 
 
-[linkedin]: https://www.google.com/
+
+[linkedin]: https://www.linkedin.com/in/aganith-shanbhag-403837184/
+[insta]: https://www.instagram.com/aganithshanbhag/
+[quora]: https://www.quora.com/profile/Aganith-Shanbhag
+[twitter]: https://twitter.com/Aganith_
+[medium]: https://medium.com/@aganithshanbhag
 
 
 
