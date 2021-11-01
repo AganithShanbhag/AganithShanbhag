@@ -1,7 +1,7 @@
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
 - 👀 I’m a 3rd Year at MIT Manipal, learning Electronics and Communication Engineering
-- 🌱 I’m currently learning Azure
+- 🌱 I’m currently learning Labview and Microsoft Azure
 - 💞️ I’m looking to collaborate on a cloud based Azure Project
 - 📫 Reach me -> aganithshanbhag@gmail.com 
 
