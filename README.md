@@ -1,8 +1,8 @@
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
 - 👀 I’m a 3rd Year at MIT Manipal, learning Electronics and Communication Engineering
-- 🌱 I’m currently learning Labview and Microsoft Azure
-- 💞️ I’m looking to collaborate on a cloud based Azure Project
+- 🌱 I’m currently learning Data Science with R and Development
+- 💞️ I’m looking to collaborate on a 6G ML|AI|DL Projects
 - 📫 Reach me -> aganithshanbhag@gmail.com 
 
 <br/>
@@ -10,7 +10,7 @@
 
 > **An Electronics Engineering student with an interest in
 Software Engineering. I love Web Development and
-currently learning App Dev. Recent projects include
+currently branching into the world of Data Science. Recent projects include
 React and React-native with Firebase BaaS. I am
 experienced with C++, Python, Matlab, Pspice, Ngspice,
 Proteus and have spent a considerable amount of time
