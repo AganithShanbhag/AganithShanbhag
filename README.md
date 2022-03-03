@@ -2,7 +2,7 @@
 
 - 👀 I’m a 3rd Year at MIT Manipal, learning Electronics and Communication Engineering
 - 🌱 I’m currently learning Data Science with R and Development
-- 💞️ I’m looking to collaborate on a 6G ML|AI|DL Projects
+- 💞️ I’m looking to collaborate on a 6G ML | AI | DL Projects
 - 📫 Reach me -> aganithshanbhag@gmail.com 
 
 <br/>
