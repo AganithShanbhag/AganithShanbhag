@@ -4,6 +4,9 @@
 - 🌱 I’m currently learning Data Science with R and Development
 - 💞️ I’m looking to collaborate on a 6G ML | AI | DL Projects
 - 📫 Reach me -> aganithshanbhag@gmail.com 
+- https://drive.google.com/drive/folders/1ApmvqE1akNolmvVIiet-RzaWDxr9BEiz?usp=sharing
+![image](https://user-images.githubusercontent.com/78319367/172066092-d2a2d6f2-1ae0-46dd-a595-1bba7eb8f3b8.png)
+
 
 <br/>
 <br/>
