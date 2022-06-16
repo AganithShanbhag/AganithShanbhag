@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 5px;
+            background: #f1f1f1;
+        }
+
+        /* hero */
+        .header {
+            padding: 50px;
+            margin: 0px 2px 15px 2px;
+            background-color: rgba(36, 36, 241, 0.71);
+
+            border: 5px solid #00bfff7d;
+            display: flex;
+            justify-content: center;
+
+            height: 250px;
+            font-size: xx-large;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 70%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 30%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            padding: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        .rowCard {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p>Central Repository for Data Science</p>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+
+            <h2>Central Repository for Data Science</h2>
+            <h5>Last Updated - July 6 2022</h5>
+
+            <div class="rowCard">
+                <div class="card" style="            width: 419px;">
+                    <img src="https://appsilon.com/static/eea547b6ecdf9e681c7901a2316f8529/Thumbnail-2.jpg" width="100%"
+                        style="margin-bottom: -7px;" />
+                </div>
+
+                <div class="card" style="            width: 419px;">
+                    <img src="data:image/png;base64,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"
+                        width="100%" style="margin-bottom: -7px;" />
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>CRDS</h2>
+                <div class="fakeimg" style="height:100px;">Image</div>
+
+
+                <h5>CRDS repo structure guide</h5>
+                <ul style="list-style-type:disc">
+                    <li>packages</li>
+                    <ul style="list-style-type:disc">
+                        <li>miniCRAN</li>
+                        <li>py_</li>
+                    </ul>
+                    <li>code</li>
+                </ul>
+                <p>CRDS is an offline Local Repository for R and Py hosting the packages for respective softwares. CRDS
+                    provides complete documentation on example codes/ snippets to carry out data analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Most Freq Used Codes</h3>
+                <div class="fakeimg">Image</div><br>
+                <div class="fakeimg">Image</div><br>
+                <div class="fakeimg">Image</div>
+            </div>
+            <div class="card">
+                <h3>Project </h3>
+                <p>Some text..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+</body>
+
+</html>
