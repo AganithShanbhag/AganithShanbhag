@@ -1,0 +1,32 @@
+#link : https://ladal.edu.au/tagging.html
+
+
+
+m_eng   <- udpipe::udpipe_download_model(language = "english-ewt")
+m_eng <- udpipe_load_model(file = here::here("udpipemodels", "english-ewt-ud-2.5-191206.udpipe"))
+
+
+udpipeText <- ocrText
+
+udpipeText <- udpipeText %>% str_squish()
+
+text_anndf <- udpipe::udpipe_annotate(m_eng, x = udpipeText) %>% as.data.frame() %>% dplyr::select(-sentence)
+
+head(text_anndf, 10)
+
+data <- filter(text_anndf, xpos == "NNP")
+
+people <- toupper(data$token)
+people <- table(people)
+people.freq = as.integer(people)
+
+
+## display
+par(mar=c(5.1, 13 ,4.1 ,2.1))
+barplot(people, las = 2, cex.names = 0.5, col = "yellow", cex.axis = 1, )
+
+par(mar=c(0, 0  ,0, 0))
+wordcloud(names(people), people.freq, colors = rainbow(5), min.freq = 1, max.words = "inf", scale = c(4, 1))
+
+
+
