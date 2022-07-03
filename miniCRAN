@@ -1,0 +1,10 @@
+library("miniCRAN")
+
+# use Revolution Analytics CRAN mirror
+revolution <- c(CRAN = "https://cran.microsoft.com/snapshot/2019-06-02")
+
+# Specify list of packages to download
+pkgs <- c("foreach")
+pkgList <- pkgDep(pkgs, repos = revolution, type = "source", suggests = FALSE, 
+                  availPkgs = cranJuly2014)
+pkgList
