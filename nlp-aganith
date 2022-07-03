@@ -1,0 +1,254 @@
+###########################  Natural Language Processing in R  ############################
+
+
+
+# 1. Read the file using OCR-Tesseract (Addition)
+# 2. I have included a text file for scoring the model (Supervised)  .... Explain the scoring process
+# 3. After obtaining the text... process it 
+
+#                       Clean the data
+#                       Stem it/ Lemma
+
+#                       Freq of Occ
+
+#                       Latent Dirichlet Allocation - Topic Modeling
+
+#                       Sentiment Analysis
+
+#                       Parts of speech - Annotation/entity - Named Entity Recoginition NER
+
+#                       Plots - barplot/ wordcloud
+
+
+#------------------------------------- 1. Scoring the tesseract-OCR model---------------------------------------------
+
+start.time <- Sys.time()
+
+library(tidyverse)
+library(tesseract)
+library(pdftools)
+library(magick)
+library(purrr)
+library(tm)
+library(SnowballC)
+library(ggplot2)
+library(wordcloud)
+library(udpipe)
+library(stringr)
+library(dplyr)
+
+
+
+pngfile <- pdftools::pdf_convert("C:\\Users\\AGANITH\\Documents\\cia files\\hang\\INTELLIGENCE_REPORT_HANG_IMAGE.pdf", dpi = 600)
+
+
+ocrText <- tesseract::ocr(pngfile)
+cat(ocrText)
+
+
+#just for scoring -- not required for real analysis
+originalText <- paste(readLines("C:\\Users\\AGANITH\\Documents\\cia files\\hang\\INTELLIGENCE_REPORT_HANG.txt", encoding = "UTF-8"), collapse =  " ")
+
+originalText <- tolower(gsub("[^[:alnum:]]", " ", originalText))
+
+ocrText <- tolower(gsub("[^[:alnum:]]", " ", ocrText))
+
+## ocr text
+
+str(ocrText)
+
+## original text
+
+str(originalText)
+
+
+originalText1 <- originalText
+ocrText1 <- ocrText
+
+
+#visualize the difference
+library(diffobj)
+diffChr(originalText1, ocrText1)
+
+
+ocrText <- unlist(strsplit(ocrText, " "))
+originalText <- unlist(strsplit(originalText, " "))
+
+difference = setdiff(originalText, ocrText)
+
+score = 100*( length(originalText) - length(difference) )/length(originalText)
+
+sprintf("The score obtained is:")
+
+score
+
+
+# We can do NLP on this 
+
+#---------------------------------------Natural Language Processing------------------------------------------#
+
+
+## 1. Freq of Occurence
+
+
+corpus <- iconv(ocrText, to='UTF-8', sub = "byte")
+corpus <- Corpus(VectorSource(corpus))
+inspect(corpus[1:5])
+
+
+## Tidy the data
+
+toSpace <- content_transformer(function(x, pattern) { return (gsub(pattern, " ", x))})
+
+corpus <- tm_map(corpus, toSpace, "-")
+corpus <- tm_map(corpus, toSpace, ":")
+corpus <- tm_map(corpus, toSpace, "'")
+corpus <- tm_map(corpus, toSpace, " -")
+
+
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, content_transformer(tolower))
+corpus <- tm_map(corpus, removeNumbers)
+corpus <- tm_map(corpus, removeWords, stopwords("english"))
+corpus <- tm_map(corpus, stripWhitespace)
+
+#corpus <- tm_map(corpus, stemDocument)
+
+writeLines(as.character(corpus[[5]]))
+
+
+dtm <- DocumentTermMatrix(corpus)
+inspect(dtm[1:2, 10:50])
+
+freq <- colSums(as.matrix(dtm))
+ord<- order(freq, decreasing = TRUE)
+
+freq[head(ord)]
+
+findFreqTerms(dtm, lowfreq = 20)
+
+# correlation - co occurence; Which 2 words occur frequently together
+
+findAssocs(dtm, "work", 0.6) #atleast 60%
+findAssocs(dtm, "power", 0.6)
+findAssocs(dtm, "system", 0.6)
+
+#plot freq of Occur
+
+
+wf = data.frame(term = names(freq), occurences = freq)
+p <- ggplot(subset(wf, freq > 18), aes(term, occurences))
+p <- p + geom_bar(stat = "identity")
+p <- p +theme(axis.text.x = element_text(angle = 45, hjust = 1))
+p
+
+wordcloud(names(freq), freq, min.freq = 8, colors  = brewer.pal(6, "Dark2"))
+
+
+
+
+#-------------------------------------------Parts of Speech Tagging-----------------------------------------#
+
+# NLP- POS in R can be done through OpenNLP by Apache, udpipe
+
+# OpenNLP has external dependency of java and kept crashing ...memory heap error something 
+
+# In Udpipe u can train custom models...even Hindi texts
+# https://ladal.edu.au/tagging.html
+
+                                          #############################
+                                          
+                                          # NNP - Proper Noun, Singular
+                                          
+                                          # NNPS- Proper Noun, Plural
+                                          
+                                          # JJ, JJR - adjective, Superlative, Comparative
+                                          
+                                          # CD - Cardinal Number
+                                          
+                                          # VBD VBG VBN VBP VBZ - Verbs/Tense 
+                                          
+                                          #############################
+
+#one time download -- english model
+m_eng   <- udpipe::udpipe_download_model(language = "english-ewt")
+
+# location of the model in udpipe-models/english-ewt-ud-2.5-191206.udpipe
+m_eng <- udpipe_load_model(file = here::here("udpipe-models", "english-ewt-ud-2.5-191206.udpipe"))
+
+udpipeText <- ocrText1
+
+udpipeText <- udpipeText %>% str_squish()
+
+text_anndf <- udpipe::udpipe_annotate(m_eng, x = udpipeText) %>% as.data.frame() %>% dplyr::select(-sentence)
+
+head(text_anndf, 10)
+
+#--------------- Proper Noun------------------#
+
+dataPeople <- filter(text_anndf, xpos == c("NNP", "NNPS"))
+#filter is included in dplyr
+
+people <- toupper(dataPeople$token)
+people <- table(people)
+people.freq = as.integer(people)
+
+
+## display
+par(mar=c(5.1, 13 ,4.1 ,2.1))
+barplot(people, las = 2, cex.names = 0.5, col = "yellow", cex.axis = 1, )
+
+par(mar=c(0, 0  ,0, 0))
+wordcloud(names(people), people.freq, colors = rainbow(5), min.freq = 1, max.words = "inf", scale = c(4, 1))
+
+
+#--------------- Adjectives ------------------#
+
+dataAdj <- filter(text_anndf, xpos == c("JJ", "JJR"))
+
+adjectives <- toupper(dataAdj$token)
+adjectives <- table(adjectives)
+adjectives.freq = as.integer(adjectives)
+adjectives <- subset(adjectives, adjectives.freq >= 3)
+
+
+## display
+par(mar=c(5.1, 13 ,4.1 ,2.1))
+barplot(adjectives, las = 2, cex.names = 0.5, col = "blue", cex.axis = 1, )
+
+par(mar=c(0, 0  ,0, 0))
+wordcloud(names(adjectives), adjectives.freq, colors = rainbow(5), min.freq = 1, max.words = "inf", scale = c(4, 1))
+
+#---------------Cardinal Number--------------#
+
+dataCardN <- filter(text_anndf, xpos == c("CD"))
+
+cardNo <- toupper(dataCardN$token)
+cardNo <- table(cardNo)
+cardNo.freq = as.integer(cardNo)
+cardNo <- subset(cardNo, cardNo.freq >= 5)
+
+## display
+par(mar=c(5.1, 13 ,4.1 ,2.1))
+barplot(cardNo, las = 2, cex.names = 0.8, col = "blue", cex.axis = 1)
+
+par(mar=c(0, 0  ,0, 0))
+wordcloud(names(cardNo), cardNo.freq, colors = rainbow(5), min.freq = 1, max.words = "inf", scale = c(6, 2))
+
+#-------------------Verbs----------------------#
+
+dataVerbs <- filter(text_anndf, xpos == c("VBD", "VBG", "VBN", "VBP", "VBZ"))
+
+verbs <- toupper(dataVerbs$token)
+verbs <- table((verbs))
+verbs.freq = as.integer(verbs)
+verbs <- subset(verbs, verbs.freq >= 3)
+
+## display
+par(mar=c(5.1, 13 ,4.1 ,2.1))
+barplot(verbs, las = 2, cex.names = 0.8, col = "blue", cex.axis = 1)
+
+par(mar=c(0, 0  ,0, 0))
+wordcloud(names(verbs), verbs.freq, colors = rainbow(5), min.freq = 1, max.words = "inf", scale = c(6, 2))
+
+
