@@ -1,20 +1,15 @@
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-- 👀 I’m a 3rd Year at MIT Manipal, learning Electronics and Communication Engineering
-- 🌱 I’m currently learning Data Science with R and Development
-- 💞️ I’m looking to collaborate on a 6G ML | AI | DL Projects
-- 📫 Reach me -> aganithshanbhag@gmail.com 
+- 👀 I’m currently working in a Managerial role that involves a creative mix of Data Science, ML Operations and Business Intillegence Analytics
+- 💞️ If you are intrested in any AI/ML/DL project then hmu
+- 📫 Reach out to me -> aganithshanbhag@gmail.com 
 
 <br/>
 <br/>
 
-> **An Electronics Engineering student with an interest in
-Software Engineering. I love Web Development and
-currently branching into the world of Data Science. Recent projects include
-React and React-native with Firebase BaaS. I am
-experienced with C++, Python, Matlab, Pspice, Ngspice,
-Proteus and have spent a considerable amount of time
-on Arduino Projects**<br/><a id="raw-url" href="AganithShanbhag_EC.pdf">Download My Resume</a>
+> ** My work primarily revolves around building AI/ML and pipeline products to straemline the company IT requirements. I'm an Electronics & Communication Engineer with a minor in Data Science.**<br/>
+
+<!---<a id="raw-url" href="AganithShanbhag_EC.pdf">Download My Resume</a>-->
 
 <hr/>
 
@@ -37,9 +32,9 @@ on Arduino Projects**<br/><a id="raw-url" href="AganithShanbhag_EC.pdf">Download
 
 <br/>
 
-## Stats
+--## Stats--
 
-![Aganith's Github Stats](https://github-readme-stats.vercel.app/api?username=aganithshanbhag&theme=dark&show_icons=true)
+<!---![Aganith's Github Stats](https://github-readme-stats.vercel.app/api?username=aganithshanbhag&theme=dark&show_icons=true)-->
 
 
 
