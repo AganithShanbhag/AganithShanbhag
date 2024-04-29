@@ -1,13 +1,14 @@
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-- 👀 I’m currently working in a Managerial role that involves a creative mix of Data Science, ML Operations and Business Intillegence Analytics
-- 💞️ If you are intrested in any AI/ML/DL project then hmu
+- 👀 Currently working in a managerial role that involves a creative mix of Data Science, ML Operations and Business Intillegence Analytics
+  
+- 💻 My work primarily revolves around building AI/ML and pipeline products to streamline the company IT requirements. I'm an Electronics & Communication Engineer with a minor in Data Science.
+  
+- 💞️ If you are intrested in any AI/ML/DL projects then hmu
 - 📫 Reach out to me -> aganithshanbhag@gmail.com 
 
 <br/>
 <br/>
-
-> ** My work primarily revolves around building AI/ML and pipeline products to straemline the company IT requirements. I'm an Electronics & Communication Engineer with a minor in Data Science.**<br/>
 
 <!---<a id="raw-url" href="AganithShanbhag_EC.pdf">Download My Resume</a>-->
 
