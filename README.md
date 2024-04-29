@@ -1,6 +1,6 @@
 # Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
-- 👀 Currently working in a managerial role that involves a creative mix of Data Science, ML Operations and Business Intillegence Analytics
+- 👀 Currently working in a managerial role that involves a creative mix of Data Science, ML Operations and Business Intelligence Analytics
   
 - 💻 My work primarily revolves around building AI/ML and pipeline products to streamline the company IT requirements. I'm an Electronics & Communication Engineer with a minor in Data Science.
   
